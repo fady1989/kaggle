@@ -1,0 +1,59 @@
+BEST 0.78902
+
+
+Using Porter Stemmer
+vw train.vw --oaa 20 -b 26 -q ff --loss_function logistic --l2 0.000001 --passes 100 --cache_file cache -k --decay_learning_rate 0.9 --predictions p -f model
+0.219261
+SUBMITTED
+0.77725
+
+
+Using WordNetLemmatizer
+vw train.vw --oaa 20 -b 26 -q ff --loss_function logistic --passes 100 --cache_file cache -k --decay_learning_rate 0.9 --predictions p -f model
+0.204677
+
+
+
+Using WordNetLemmatizer
+vw train.vw --oaa 20 -b 26 --loss_function logistic --passes 100 --cache_file cache -k --decay_learning_rate 0.9 --predictions p -f model
+0.202162
+
+
+vw train.vw --oaa 20 -b 26 --passes 100 --cache_file cache -k --predictions p -f model
+0.197636
+SUBMITTED
+0.78449
+
+
+
+vw train.vw --oaa 20 -b 26 --loss_function logistic --passes 100 --cache_file cache -k --predictions p -f model
+0.201408
+SUBMITTED
+0.78852
+
+
+vw train.vw --oaa 20 -b 26 --loss_function logistic  --passes 100 --cache_file cache -k --power_t 0 --predictions p -f model
+0.209454
+SUBMITTED
+0.78319
+
+
+vw -i model -t test.vw --predictions test
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
